@@ -1,3 +1,6 @@
+Rudra Patel (Stranger Things)
+I had chose the themes of strangert hings for my javascript angular assignments.
+
 # RPatelStrangerThings
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
