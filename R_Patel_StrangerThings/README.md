@@ -1,5 +1,10 @@
-Rudra Patel (Stranger Things)
-I had chose the themes of strangert hings for my javascript angular assignments.
+Rudra Patel (W0779707)
+
+I had chose the themes of stranger things for my javascript angular assignments.
+
+I am using the characters of this web-series are mentioned below:
+Eleven(El): The girl with super power and as a main lead role.
+Mike,Will,Dustin,Lucas and Max: Are teenager group fighting an evil monster.
 
 # RPatelStrangerThings
 
