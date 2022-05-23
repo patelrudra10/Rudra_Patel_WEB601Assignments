@@ -1,6 +1,6 @@
 {
   "name": "r-patel-stranger-things",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "generateInterface": "ng generate interface",
-    "generateClass": "ng generate class"
+    "generateClass": "ng generate class",
+    "generateComponent": "ng generate component"
   },
   "private": true,
   "dependencies": {
