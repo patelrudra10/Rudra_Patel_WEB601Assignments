@@ -1,1 +1,13 @@
-<p>content-card works!</p>
+<h2 *ngIf="char && char.title else elseBlockNameIsWhateverYouWant">
+    {{char?.title }}
+</h2>
+
+<img *ngIf="char && char.imageLink else elseBlockNameIsWhateverYouWant" [src]="char.imageLink" (click)="mychardetails()">
+<p class="body" *ngIf="char && char.body; else elseBlockNameIsWhateverYouWant">{{char?.body}}</p>
+
+<div class="type"  *ngIf="char && char.type else elseBlockNameIsWhateverYouWant">{{char?.type}}</div>
+<div class="author"  *ngIf="char && char.author else elseBlockNameIsWhateverYouWant">{{char?.author}}</div>
+
+<ng-template #elseBlockNameIsWhateverYouWant>
+<p class="nothing-found">No Content Found</p>
+</ng-template>

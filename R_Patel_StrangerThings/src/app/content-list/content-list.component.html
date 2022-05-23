@@ -1,1 +1,5 @@
-<p>content-list works!</p>
+<div>
+    <app-content-card *ngFor="let item of strangerthings; index as i; first as isFirst;" [char]="item"
+      class="stranger-{{i+1}}">
+    </app-content-card>
+</div>
