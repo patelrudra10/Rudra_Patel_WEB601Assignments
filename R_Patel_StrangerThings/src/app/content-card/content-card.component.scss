@@ -7,15 +7,24 @@ text-align: center;
 border: 2px solid rgb(255, 101, 101);
 
 &.is-even {
- background-color: gray;
+ background-color: rgb(114, 114, 114);
 }
 &.is-odd{
-background-color: white;
+background-color: rgb(255, 255, 255);
+}
+
+.body{
+margin-top: 3px;    
+border-style: solid;
+border-width: 2px;
+padding: 10px;
+border-color:darkslateblue;
+background-color: aqua;
 }
 
 img{
 width: 20em;
-border: 5px solid rgb(0, 29, 133);
+border: 3px solid rgb(0, 29, 133);
 }
 
 .type{
@@ -23,6 +32,7 @@ border-style: solid;
 border-width: 2px;
 padding: 10px;
 border-color:darkslateblue;
+background-color: darksalmon;
 }
 
 .author{
@@ -31,6 +41,7 @@ border-style: solid;
 border-width: 2px;
 padding: 10px;
 border-color:darkslateblue;
+background-color:goldenrod;
 }
 
 .hashtag{
@@ -39,5 +50,6 @@ border-style: solid;
 border-width: 2px;
 padding: 10px;
 border-color:darkslateblue;
+background-color: lightpink;
 }
 }
