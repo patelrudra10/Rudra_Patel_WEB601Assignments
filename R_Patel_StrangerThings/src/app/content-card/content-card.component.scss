@@ -5,7 +5,13 @@ padding: 10px;
 margin: 10px auto;
 text-align: center;
 border: 2px solid rgb(255, 101, 101);
-background-color: burlywood;
+
+&.is-even {
+ background-color: gray;
+}
+&.is-odd{
+background-color: white;
+}
 
 img{
 width: 20em;
