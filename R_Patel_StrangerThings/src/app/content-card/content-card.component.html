@@ -7,6 +7,7 @@
 
 <div class="type"  *ngIf="char && char.type else elseBlockNameIsWhateverYouWant">{{char?.type}}</div>
 <div class="author"  *ngIf="char && char.author else elseBlockNameIsWhateverYouWant">{{char?.author}}</div>
+<div class="hashtag"  *ngIf="char && char.hashtag else elseBlockNameIsWhateverYouWant">{{char?.hashtag}}</div>
 
 <ng-template #elseBlockNameIsWhateverYouWant>
 <p class="nothing-found">No Content Found</p>

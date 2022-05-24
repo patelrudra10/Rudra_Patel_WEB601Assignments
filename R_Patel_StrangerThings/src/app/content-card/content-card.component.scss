@@ -1,0 +1,37 @@
+:host{
+display: block;
+width: 500px;
+padding: 10px;
+margin: 10px auto;
+text-align: center;
+border: 2px solid rgb(255, 101, 101);
+background-color: burlywood;
+
+img{
+width: 20em;
+border: 5px solid rgb(0, 29, 133);
+}
+
+.type{
+border-style: solid;
+border-width: 2px;
+padding: 10px;
+border-color:darkslateblue;
+}
+
+.author{
+margin-top: 2px;
+border-style: solid;
+border-width: 2px;
+padding: 10px;
+border-color:darkslateblue;
+}
+
+.hashtag{
+margin-top: 2px;
+border-style: solid;
+border-width: 2px;
+padding: 10px;
+border-color:darkslateblue;
+}
+}
