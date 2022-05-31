@@ -75,6 +75,27 @@ export class ContentListComponent implements OnInit {
     }
     ]
   }
+  
+  value = '';
+  getValue(input:string)
+  {
+    let inputBox = (<HTMLInputElement>document.querySelector('input'));
+    this.strangerthings.forEach(e => {
+      if(e.author === input)
+      {
+        this.value = `Content item exists with the Author ${input}`
+        inputBox.style.color = "blue";
+        return  this.value;
+        
+      }
+      else
+      {
+        this.value = `Content item doesn't exists with the Author ${input}`;
+        inputBox.style.color = "gray";
+        return  this.value;
+      }
+    })
+  }
 
   ngOnInit(): void {
   }
