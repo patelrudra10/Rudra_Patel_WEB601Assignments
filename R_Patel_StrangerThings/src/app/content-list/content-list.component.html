@@ -5,10 +5,21 @@
 <!-- </div> -->
 
 <div *ngFor="let item of (strangerthings | type); index as i; first as isFirst; odd as odd; even as even;" >
- <app-content-card *ngIf="item.type=='All'" [char]="item" 
+ <app-content-card *ngIf="item.type=='Superhuman'" [char]="item" 
   class="chess-player-{{i}}">
 </app-content-card>
-
 </div>
+
+<div *ngFor="let item of (strangerthings | type); index as i; first as isFirst; odd as odd; even as even;" >
+  <app-content-card *ngIf="item.type=='Human'" [char]="item" 
+   class="chess-player-{{i}}">
+ </app-content-card>
+ </div>
+
+ <div *ngFor="let item of (strangerthings | type); index as i; first as isFirst; odd as odd; even as even;" >
+  <app-content-card *ngIf="item.type==''" [char]="item" 
+   class="chess-player-{{i}}">
+ </app-content-card>
+ </div>
 
 
