@@ -4,21 +4,24 @@
     <!-- </app-content-card> -->
 <!-- </div> -->
 
+<h3 class="title">Type-Superhuman</h3>
 <div *ngFor="let item of (strangerthings | type); index as i; first as isFirst; odd as odd; even as even;" >
- <app-content-card *ngIf="item.type=='Superhuman'" [char]="item" 
-  class="chess-player-{{i}}">
+  <app-content-card *ngIf="item.type=='Superhuman'" [char]="item" 
+  class="chess-player-{{i}}" class="super" >
 </app-content-card>
 </div>
 
+<h3 class="title">Type-Human</h3>
 <div *ngFor="let item of (strangerthings | type); index as i; first as isFirst; odd as odd; even as even;" >
   <app-content-card *ngIf="item.type=='Human'" [char]="item" 
-   class="chess-player-{{i}}">
+   class="chess-player-{{i}}" class="human">
  </app-content-card>
  </div>
 
+ <h3 class="title">Type-Not Found</h3>
  <div *ngFor="let item of (strangerthings | type); index as i; first as isFirst; odd as odd; even as even;" >
   <app-content-card *ngIf="item.type==''" [char]="item" 
-   class="chess-player-{{i}}">
+   class="chess-player-{{i}}" class="nothing">
  </app-content-card>
  </div>
 

@@ -1,5 +1,25 @@
-.title{
-color:crimson;
-text-align: center;
-padding:5px;
-}
+:host {
+    .title{
+        color:gold;
+        background-color:cadetblue;
+        text-align: center;
+        border-style: solid;
+        border-width: 4px;
+        border-color:darkslateblue;
+    }
+    .super {
+        background-color:#F0EDCC;
+        color:#02343F;
+    }
+
+    .human {
+        background-color:#ACC7B4;
+        color:#815854;
+        
+    }
+
+    .nothing {
+        background-color:#FFDFDE;
+        color:#6A7BA2;
+    }
+};
