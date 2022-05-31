@@ -8,7 +8,7 @@ export class TypePipe implements PipeTransform {
 
   transform(strangerthings:Content[], typeInput?: string): Content[] {
     return  strangerthings.filter(character =>{
-      return !character.type?.length || character.type =="Superhuman" || character.type =="Human";
+      return !character.type?.length || character.type =="Superhuman" || character.type =="Human" || character.type =="All" ;
 
     })
   }
