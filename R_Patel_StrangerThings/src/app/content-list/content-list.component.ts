@@ -56,20 +56,20 @@ export class ContentListComponent implements OnInit {
       hashtag: ['Steven']
     },
     {
-      id: 4,
+      id: 5,
       title: 'Dustin',
       body: 'Dustin Henderson, portrayed by Gaten Matarazzo, is one of the main protagonists of Stranger Things.',
       author: 'Duffer Brothers',
-      imageLink: 'https://static.wikia.nocookie.net/headhuntersholosuite/images/2/26/Stranger_Things_2x01_002.jpg/revision/latest?cb=20180104132828',
+      imageLink: 'https://i.insider.com/5e4ecd2681a9aa7bc13f78b6?width=1000&format=jpeg&auto=webp',
       type: '',
       hashtag: ['Steven']
     },
     {
-      id: 4,
+      id: 6,
       title: 'Nancy',
       body: 'Nancy Wheeler is a fictional character from the Netflix television show Stranger Things, portrayed by Natalia Dyer.',
       author: 'Duffer Brothers',
-      imageLink: 'https://en.wikipedia.org/wiki/File:Natalia_Dyer_by_Gage_Skidmore.jpg',
+      imageLink: 'https://www.hleatherjackets.com/wp-content/uploads/2019/07/26.jpg',
       type: '',
       hashtag: ['Nance']
     }
