@@ -54,7 +54,7 @@ export class ContentListComponent implements OnInit {
       imageLink: 'https://static0.srcdn.com/wordpress/wp-content/uploads/2019/05/joe-keery-as-steve-harrington-stranger-things.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5',
       type: 'Human',
       hashtag: ['Steven']
-    }
+    },
     {
       id: 4,
       title: 'Dustin',
@@ -63,7 +63,7 @@ export class ContentListComponent implements OnInit {
       imageLink: 'https://static.wikia.nocookie.net/headhuntersholosuite/images/2/26/Stranger_Things_2x01_002.jpg/revision/latest?cb=20180104132828',
       type: '',
       hashtag: ['Steven']
-    }
+    },
     {
       id: 4,
       title: 'Nancy',
