@@ -1,4 +1,4 @@
-<h2 *ngIf="char && char.title else elseBlockNameIsWhateverYouWant">
+<h2 *ngIf="char && char.title else elseBlockNameIsWhateverYouWant" appHighLightImportantData>
     {{char?.title }}
 </h2>
 
@@ -9,9 +9,9 @@
 
 <p class="body" *ngIf="char && char.body; else elseBlockNameIsWhateverYouWant">{{char?.body}}</p>
 
-<div class="type"  *ngIf="char && char.type elseBlockNameIsWhateverYouWant">{{char?.type}}</div>
+<div class="type"  *ngIf="char && char.type elseBlockNameIsWhateverYouWant" appHighLightImportantData>{{char?.type}}</div>
 <div class="author"  *ngIf="char && char.author else elseBlockNameIsWhateverYouWant">{{char?.author}}</div>
-<div class="hashtag"  *ngIf="char && char.hashtag else elseBlockNameIsWhateverYouWant">{{char?.hashtag}}</div>
+<div class="hashtag"  *ngIf="char && char.hashtag else elseBlockNameIsWhateverYouWant" appHighLightImportantData>{{char?.hashtag}}</div>
 
 <ng-template #elseBlockNameIsWhateverYouWant>
 <p class="nothing-found">No Content Found</p>
