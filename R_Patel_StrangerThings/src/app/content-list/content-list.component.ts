@@ -8,6 +8,11 @@ import { Content } from '../models/content';
 })
 export class ContentListComponent implements OnInit {
   strangerthings:Content[];
+  types: string[] = ["", "IM", "FM", "GM"];
+  authorSearchMessage = {
+    message: "",
+    found: false
+  };
 
   constructor() { 
     this.strangerthings = [{
@@ -98,6 +103,16 @@ export class ContentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  checkForAuthorInList(authorNameValue: string): void {
+    if (this.strangerthings.some(player => player.author === authorNameValue)) {
+      this.authorSearchMessage.message = "Author Found";
+      this.authorSearchMessage.found = true;
+    }
+    else {
+      this.authorSearchMessage.message = "Author Not Found";
+      this.authorSearchMessage.found = false;
+    }
   }
 
 }

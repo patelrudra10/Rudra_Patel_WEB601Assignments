@@ -3,9 +3,14 @@
       <!-- class="stranger-{{i+1}}"  [class.is-odd]="odd" [class.is-even]="even"> -->
     <!-- </app-content-card> -->
 <!-- </div> -->
-<div>
-	<input id="input" #Input placeholder="Enter the Author" #getInput id="text" type="text" value="{{value}}"> <br>
-	<button class="InputBtn" type="button" (click)="getValue(getInput.value)">{{value ? value : 'Click me'}}</button>
+<div><label>
+  Author name search:
+  <input #authorToSearchFor>
+</label>
+<button (click)="checkForAuthorInList(authorToSearchFor.value)">Check for Author</button>
+</div>
+<div class="author-error" [style]="authorSearchMessage.found ? 'color: blue' : 'color: grey'">
+{{ authorSearchMessage.message }}
 </div>
 
 <h3 class="title">Type-Superhuman</h3>
