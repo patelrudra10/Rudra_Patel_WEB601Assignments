@@ -1,22 +1,35 @@
-import { Directive, ElementRef, HostBinding, HostListener, Input} from '@angular/core';
-
+import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angular/core';
 @Directive({
   selector: '[appHighlightImportantData]'
 })
 export class HighlightImportantDataDirective {
-  @Input() defaultColor:string="";  
-  @Input() highlightedColor:string="";  
+  @Input() color?: string;
+  private highlight: boolean = false;
+  
+  private initialBorder: string;
+  private initialColor: string;
 
-@HostBinding('style.border') border:string=this.defaultColor;  
+  @HostBinding('style.backgroundColor')
+  get backgroundColor() {
+    return this.highlight ? this.color || "transparent" :
+      this.initialColor;
+  }
 
-  constructor( private eleRef:ElementRef){}  
-
-  @HostListener('mousein') mousein(eventData:Event){  
-      this.border=this.highlightedColor;  
-       
-  }  
-
-  @HostListener('mouseout') mouseout(eventData:Event){  
-      this.border=this.defaultColor;   
-  } 
+  @HostBinding('style.border')
+  get border() {
+    return this.highlight ? '3px solid black' : this.initialBorder;
+  }
+  constructor(private elm: ElementRef) {
+    this.initialBorder = this.elm.nativeElement.style.border;
+    this.initialColor = this.elm.nativeElement.style.backgroundColor;
+  }
+  @HostListener('mousein') onclickTitle() {
+    this.highlight = !this.highlight;
+  }
+  @HostListener('mouseout') onClickTitle() {
+    this.highlight = !this.highlight;
+  }
+  @HostListener('click') onClickType() {
+    this.highlight = !this.highlight;
+  }
 }
