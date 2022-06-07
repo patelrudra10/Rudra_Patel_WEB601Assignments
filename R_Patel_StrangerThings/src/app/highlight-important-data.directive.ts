@@ -14,16 +14,17 @@ export class HighlightImportantDataDirective {
     return this.highlight ? this.color || "transparent" :
       this.initialColor;
   }
-
+  
   @HostBinding('style.border')
   get border() {
     return this.highlight ? '3px solid black' : this.initialBorder;
   }
-  constructor(private elm: ElementRef) {
-    this.initialBorder = this.elm.nativeElement.style.border;
-    this.initialColor = this.elm.nativeElement.style.backgroundColor;
+  
+  constructor(private el: ElementRef) {
+    this.initialBorder = this.el.nativeElement.style.border;
+    this.initialColor = this.el.nativeElement.style.backgroundColor;
   }
-  @HostListener('mousein') onclickTitle() {
+  @HostListener('mouseenter') onclickTitle() {
     this.highlight = !this.highlight;
   }
   @HostListener('mouseout') onClickTitle() {
@@ -32,4 +33,5 @@ export class HighlightImportantDataDirective {
   @HostListener('click') onClickType() {
     this.highlight = !this.highlight;
   }
+
 }
