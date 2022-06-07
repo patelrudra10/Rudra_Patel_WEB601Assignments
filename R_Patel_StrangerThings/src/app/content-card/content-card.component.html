@@ -1,4 +1,4 @@
-<h2 *ngIf="char && char.title else elseBlockNameIsWhateverYouWant" >{{char?.title }} </h2>
+<h2 *ngIf="char && char.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData x[color]="'pink'">{{char?.title }} </h2>
 
 <img *ngIf="char && char.imageLink else elseBlockNameIsWhateverYouWant" [src]="char.imageLink" (click)="mychardetails()"/>
   <ng-template #elseBlockNameIsWhateverYouWant>
