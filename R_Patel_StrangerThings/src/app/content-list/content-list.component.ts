@@ -29,7 +29,7 @@ export class ContentListComponent implements OnInit {
       title: 'Mike',
       body: 'Michael "Mike" Wheeler, portrayed by Finn Wolfhard, is one of the main protagonists of Stranger Things.',
       author: 'Duffer Brothers',
-      imageLink: 'https://www.hollywoodreporter.com/wp-content/uploads/2019/07/gettyimages-1156170922_copy.jpg?w=681&h=383&crop=1',
+      //imageLink: 'https://www.hollywoodreporter.com/wp-content/uploads/2019/07/gettyimages-1156170922_copy.jpg?w=681&h=383&crop=1',
       type: 'Human',
       hashtag: ['Leader']
     },
