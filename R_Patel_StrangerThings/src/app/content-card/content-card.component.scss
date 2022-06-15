@@ -49,4 +49,10 @@ background-color: lightpink;
 .InputBtn{
 background-color: aqua;
 }
+
+&.search {
+    box-shadow: 10px rgb(0, 29, 133);
+    background-color:cyan;
+  }
+
 }

@@ -19,10 +19,26 @@ export class StrangerThingsService {
       console.log(char.id, id);
       return char.id == id;
     });
+
+    if (!typechar.length) {
+      return of([
+        {
+          id: -1,
+          title: 'Not Found',
+          body: '',
+          author: '',
+          type: '',
+          imageLink:'',
+          hashtags: [''],
+        },
+      ]);
+    }
+
     console.log({ typechar });
     return of(typechar);
   }
-  insertNewChar(newChar: Content): Observable<Content[]> {
+
+  New(newChar: Content): Observable<Content[]> {
     var typechar = strangerthings.filter((char) => {
       return char.id == newChar.id;
     });
@@ -32,13 +48,13 @@ export class StrangerThingsService {
     }return of(strangerthings);
   }
 
-  updatechar(char: Content) {
-    const updatedData = strangerthings.map((a) =>
-      a.id === char.id ? { ...a, ...char } : a
-    ); return updatedData;
+  update(char: Content) {
+    const update = strangerthings.map((a) =>
+      a.id == char.id ? { a, char } : a
+    ); return update;
   }
 
-  deletechar(id: Number): Observable<Content[]> {
+  delete(id: Number): Observable<Content[]> {
     var afterDelete = strangerthings.filter(function (char) {
       return char.id != id;
     });return of(afterDelete);

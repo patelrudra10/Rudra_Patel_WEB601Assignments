@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Content } from '../models/content';
 import {StrangerThingsService} from '../stranger-things.service';
 
+
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
