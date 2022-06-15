@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../models/content';
+import {StrangerThingsService} from '../stranger-things.service';
 
 @Component({
   selector: 'app-content-list',
@@ -14,7 +15,7 @@ export class ContentListComponent implements OnInit {
     found: false
   };
 
-  constructor() { 
+  constructor(private strangerthingsService: StrangerThingsService) { 
     this.strangerthings = [];
   }
   
@@ -39,7 +40,10 @@ export class ContentListComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+    this.strangerthingsService
+      .getchar()
   }
   checkForAuthorInList(authorNameValue: string): void {
     if (this.strangerthings.some(player => player.author === authorNameValue)) {
