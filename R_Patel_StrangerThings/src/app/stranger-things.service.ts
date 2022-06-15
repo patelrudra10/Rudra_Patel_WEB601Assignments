@@ -53,7 +53,7 @@ export class StrangerThingsService {
       a.id == char.id ? { a, char } : a
     ); return update;
   }
- 
+
   delete(id: Number): Observable<Content[]> {
     var afterDelete = strangerthings.filter(function (char) {
       return char.id != id;
