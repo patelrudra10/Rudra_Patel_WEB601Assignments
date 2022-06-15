@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import {Content} from './models/content';
 import {StrangerThingsService} from './stranger-things.service';
-import{ContentListComponent} from './content-list/content-list.component';
+
 
 
 @Component({
@@ -23,6 +23,7 @@ export class AppComponent {
     console.log({ id, type: typeof id });
     this.characterService
       .getcharId(id)
+      .subscribe((movies) => (this.searchCharacter = movies));
 
       console.log({ id, type: typeof id, searchCharacter: this.searchCharacter });
   }
