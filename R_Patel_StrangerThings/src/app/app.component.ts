@@ -2,8 +2,6 @@ import { Component} from '@angular/core';
 import {Content} from './models/content';
 import {StrangerThingsService} from './stranger-things.service';
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
