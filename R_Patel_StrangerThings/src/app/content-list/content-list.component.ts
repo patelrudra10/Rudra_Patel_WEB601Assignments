@@ -46,6 +46,7 @@ export class ContentListComponent implements OnInit {
   {
     this.strangerthingsService
       .getchar()
+      .subscribe((characters) => (this.strangerthings = characters));
   }
   checkForAuthorInList(authorNameValue: string): void {
     if (this.strangerthings.some(player => player.author === authorNameValue)) {

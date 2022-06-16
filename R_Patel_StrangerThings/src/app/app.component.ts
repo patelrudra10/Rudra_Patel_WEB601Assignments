@@ -21,7 +21,7 @@ export class AppComponent {
     console.log({ id, type: typeof id });
     this.characterService
       .getcharId(id)
-      .subscribe((movies) => (this.searchCharacter = movies));
+      .subscribe((characters) => (this.searchCharacter = characters));
 
       console.log({ id, type: typeof id, searchCharacter: this.searchCharacter });
   }
