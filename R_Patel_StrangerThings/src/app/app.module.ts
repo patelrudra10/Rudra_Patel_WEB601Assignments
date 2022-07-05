@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { TypePipe } from './type.pipe';
 import { HighlightImportantDataDirective } from './highlight-important-data.directive';
+import { ContentDetailsComponent } from './content-details/content-details.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,9 @@ import { HighlightImportantDataDirective } from './highlight-important-data.dire
     ContentListComponent,
     ContentCardComponent,
     TypePipe,
-    HighlightImportantDataDirective
+    HighlightImportantDataDirective,
+    ContentDetailsComponent,
+  
   ],
   imports: [
     BrowserModule,
