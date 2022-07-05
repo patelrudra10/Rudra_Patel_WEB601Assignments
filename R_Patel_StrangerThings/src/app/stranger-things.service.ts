@@ -14,28 +14,8 @@ export class StrangerThingsService {
     return of(strangerthings);
   }
 
-  getcharId(id: Number): Observable<Content[]> {
-    var typechar = strangerthings.filter((char) => {
-      console.log(char.id, id);
-      return char.id == id;
-    });
-
-    if (!typechar.length) {
-      return of([
-        {
-          id: -1,
-          title: 'Not Found',
-          body: '',
-          author: '',
-          type: '',
-          imageLink:'',
-          hashtags: [''],
-        },
-      ]);
-    }
-
-    console.log({ typechar });
-    return of(typechar);
+  getcharId(id: number): Observable<Content> {
+    return of(strangerthings[id]);
   }
 
   New(newChar: Content): Observable<Content[]> {

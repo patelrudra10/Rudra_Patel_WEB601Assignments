@@ -9,20 +9,10 @@ import {StrangerThingsService} from './stranger-things.service';
 })
 export class AppComponent {
   title = 'R_Patel_StrangerThings';
-  searchCharacter: Content[];
 
   public id: any;
-  constructor(private characterService: StrangerThingsService) {
-    this.searchCharacter = [];
-  }
-  ngOnInit(): void {}
 
-  searchCharacterById(id: any) {
-    console.log({ id, type: typeof id });
-    this.characterService
-      .getcharId(id)
-      .subscribe((characters) => (this.searchCharacter = characters));
+  constructor() {
+  }
 
-      console.log({ id, type: typeof id, searchCharacter: this.searchCharacter });
-  }
-  }
+}

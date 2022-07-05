@@ -48,7 +48,7 @@ export class ContentListComponent implements OnInit {
       .subscribe((characters) => (this.strangerthings = characters));
   }
   checkForAuthorInList(authorNameValue: string): void {
-    if (this.strangerthings.some(player => player.author === authorNameValue)) {
+    if (this.strangerthings.some(player => player.author == authorNameValue)) {
       this.authorSearchMessage.message = "Author Found";
       this.authorSearchMessage.found = true;
     }

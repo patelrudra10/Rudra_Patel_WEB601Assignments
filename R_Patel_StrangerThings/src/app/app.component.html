@@ -1,7 +1,2 @@
-<div>
-<input type="search" #charId name="search character" id="" placeholder="Enter Id"/>
-<input type="button" value="Search Character"(click)="searchCharacterById(charId.value)"/>
-<app-content-card *ngFor="let item of searchCharacter" [char]="item" class="search"></app-content-card>
-</div>
-<app-content-list></app-content-list>
+<router-outlet></router-outlet>
  
