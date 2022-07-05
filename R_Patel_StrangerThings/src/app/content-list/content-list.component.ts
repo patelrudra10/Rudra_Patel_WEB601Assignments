@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../models/content';
 import {StrangerThingsService} from '../stranger-things.service';
-import {stringify} from "@angular/compiler/src/util";
-
 
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.scss']
 })
+
 export class ContentListComponent implements OnInit {
   strangerthings:Content[];
   types: string[] = ["", "IM", "FM", "GM"];
