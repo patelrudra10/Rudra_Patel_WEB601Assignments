@@ -8,6 +8,7 @@ import { TypePipe } from './type.pipe';
 import { HighlightImportantDataDirective } from './highlight-important-data.directive';
 import { ContentDetailsComponent } from './content-details/content-details.component';
 import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     TypePipe,
     HighlightImportantDataDirective,
     ContentDetailsComponent,
+    SearchComponent,
   
   ],
   imports: [
