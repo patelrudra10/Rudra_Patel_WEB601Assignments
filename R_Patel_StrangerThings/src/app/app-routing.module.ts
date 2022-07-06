@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ContentDetailsComponent } from './content-details/content-details.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { SearchComponent } from './search/search.component';
+import { InvalidComponent } from './invalid/invalid.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
   {
     path: "search",
     component: SearchComponent,
-  }
+  },
+  
 ];
 
 @NgModule({

@@ -1,13 +1,9 @@
-<h2 *ngIf="char && char.title else elseBlockNameIsWhateverYouWant"  appHighlightImportantData [color]="'skyblue'">{{char?.title }} </h2>
+<h2 *ngIf="char && char.title else elseBlockNameIsWhateverYouWant"  appHighlightImportantData [color]="'skyblue'" [routerLink] = "['/detail', char.id ]" routerLinkActive="active">  {{char?.title}}</h2>
 
 <img *ngIf="char && char.imageLink else elseBlockNameIsWhateverYouWant" [src]="char.imageLink" (click)="mychardetails()"/>
   <ng-template #elseBlockNameIsWhateverYouWant>
   <img [src] = " 'https://www.techniknews.net/wp-content/uploads/2022/02/stranger-things-4-1536x1037.jpeg'">
 </ng-template>
-
-<p class="body" *ngIf="char && char.body; else elseBlockNameIsWhateverYouWant">{{char?.body}}</p>
-
 <div class="type"*ngIf="char && char.type" appHighlightImportantData >{{char?.type}}</div>
-<div class="author"  *ngIf="char && char.author">{{char?.author}}</div>
 <div class="hashtag"  *ngIf="char && char.hashtag" appHighlightImportantData>{{char.hashtag}}</div>
 

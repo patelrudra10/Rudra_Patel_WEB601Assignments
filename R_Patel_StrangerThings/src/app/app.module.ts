@@ -9,6 +9,7 @@ import { HighlightImportantDataDirective } from './highlight-important-data.dire
 import { ContentDetailsComponent } from './content-details/content-details.component';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
+import { InvalidComponent } from './invalid/invalid.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SearchComponent } from './search/search.component';
     HighlightImportantDataDirective,
     ContentDetailsComponent,
     SearchComponent,
+    InvalidComponent,
   
   ],
   imports: [
