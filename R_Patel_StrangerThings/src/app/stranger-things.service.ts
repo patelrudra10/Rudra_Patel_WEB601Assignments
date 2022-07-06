@@ -14,18 +14,16 @@ export class StrangerThingsService {
     return of(strangerthings);
   }
 
-  getContentItem(id: number): Observable<Content> {
-    return of(strangerthings[id]);
-  }
-
-  New(newChar: Content): Observable<Content[]> {
-    var typechar = strangerthings.filter((char) => {
-      return char.id == newChar.id;
-    });
-
-    if (typechar.length == 0) {
-      strangerthings.push(newChar);
-    }return of(strangerthings);
+  getContentItem(id: Number): Observable<Content> {
+    for (var i = 0; i < strangerthings.length; i++) {
+      if (strangerthings[i].id === id)
+       {
+        console.log(strangerthings[i])
+        return of(strangerthings[i]);
+      }
+    }
+    console.log(strangerthings)
+    return of(strangerthings[i]);
   }
 
   update(char: Content) {

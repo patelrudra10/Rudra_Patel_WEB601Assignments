@@ -1,1 +1,12 @@
-<p>search works!</p>
+<div class="chess-search">
+    <label>
+      Character Search:
+      <input type="number" autofocus #idNumber>
+    </label>
+    <br>
+    <button (click)="checkForIdInList(idNumber.value)">Check for player at id</button>
+  </div>
+
+
+  <app-content-card [char]="item"  ></app-content-card>
+    
