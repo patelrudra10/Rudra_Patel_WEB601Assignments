@@ -1,28 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {StrangerThingsService} from '../stranger-things.service';
 import { Content } from '../models/content';
+import {StrangerThingsService} from '../stranger-things.service';
 
 @Component({
   selector: 'app-content-details',
   templateUrl: './content-details.component.html',
-  styleUrls: ['./content-details.component.css']
+  styleUrls: ['./content-details.component.scss']
 })
 export class ContentDetailsComponent implements OnInit {
- searchCharacter: Content[];
+  id?: number;
+  char?: Content;
 
-  constructor(private StrangerThingsService : StrangerThingsService) { 
-    this.searchCharacter = [];
+  constructor(private router: Router,
+    private route: ActivatedRoute,
+    private StrangerThingsService: StrangerThingsService) {
   }
 
-  ngOnInit(): void { 
-    this.StrangerThingsService.getchar().subscribe((contentArrayFromService: Content[]) => {
-      this.searchCharacter = contentArrayFromService;
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.id = +(params.get('id') ?? 0); // uses the + unary operator
+
+      this.StrangerThingsService.getContentItem(this.id).subscribe(singleItem => {
+        if (singleItem) {
+          this.char = singleItem;
+        }
+        else {
+          this.router.navigate(['/contentNotFound']);
+        }
+      });
     });
   }
 
-  searchCharacterById(id: any) {
-    this.StrangerThingsService
-      .getcharId(id)
-  }
 }

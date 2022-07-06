@@ -7,6 +7,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { TypePipe } from './type.pipe';
 import { HighlightImportantDataDirective } from './highlight-important-data.directive';
 import { ContentDetailsComponent } from './content-details/content-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContentDetailsComponent } from './content-details/content-details.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,7 +14,7 @@ export class StrangerThingsService {
     return of(strangerthings);
   }
 
-  getcharId(id: number): Observable<Content> {
+  getContentItem(id: number): Observable<Content> {
     return of(strangerthings[id]);
   }
 
