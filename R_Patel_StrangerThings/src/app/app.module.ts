@@ -10,6 +10,7 @@ import { ContentDetailsComponent } from './content-details/content-details.compo
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { InvalidComponent } from './invalid/invalid.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { InvalidComponent } from './invalid/invalid.component';
     ContentDetailsComponent,
     SearchComponent,
     InvalidComponent,
+    NavigationComponent,
   
   ],
   imports: [
