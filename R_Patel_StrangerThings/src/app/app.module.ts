@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { InvalidComponent } from './invalid/invalid.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { MemorydataService } from './memorydata.service';
 
 @NgModule({
   declarations: [
