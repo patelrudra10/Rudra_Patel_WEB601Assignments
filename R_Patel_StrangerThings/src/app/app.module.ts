@@ -11,7 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { InvalidComponent } from './invalid/invalid.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { MemorydataService } from './memorydata.service';
+import { InMemoryDataService } from './services/in-memory-data.service';
+import { HttpClientModule } from "@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,19 @@ import { MemorydataService } from './memorydata.service';
     SearchComponent,
     InvalidComponent,
     NavigationComponent,
+    InMemoryDataService
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {
+      delay: 1000,
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
