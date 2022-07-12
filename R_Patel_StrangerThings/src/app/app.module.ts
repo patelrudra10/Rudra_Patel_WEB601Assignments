@@ -26,7 +26,6 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     SearchComponent,
     InvalidComponent,
     NavigationComponent,
-    InMemoryDataService
   
   ],
   imports: [
