@@ -14,6 +14,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { ChangeContentComponent } from './change-content/change-content.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     SearchComponent,
     InvalidComponent,
     NavigationComponent,
+    ChangeContentComponent,
   
   ],
   imports: [
