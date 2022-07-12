@@ -30,6 +30,10 @@ const routes: Routes = [
     component: ChangeContentComponent,
   },
   {
+    path: "updateContent",
+    component: ChangeContentComponent,
+  },
+  {
     path: "**",
     component: InvalidComponent
   },

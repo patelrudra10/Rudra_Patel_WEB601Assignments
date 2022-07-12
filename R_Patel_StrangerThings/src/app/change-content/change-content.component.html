@@ -5,3 +5,4 @@
   <label>imageLink:<textarea [(ngModel)]="contentItem.imageLink"></textarea></label><br>
   <label>Tags:<input [(ngModel)]="tempTags"></label><br>
   <button (click)="+(contentItem.id || 'false') ? updateContentOnServer(): addContentToServer() "> Add your content </button>
+  
