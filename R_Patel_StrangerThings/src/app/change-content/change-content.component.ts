@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StrangerThingsService } from '../stranger-things.service';
+import { Content } from '../models/content';
 
 @Component({
   selector: 'app-change-content',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChangeContentComponent implements OnInit {
 
-  constructor() { }
+  contentItem: Content = {
+    title: "",
+    body: "",
+    id: null,
+    author: '',
+    type:'',
+    hashtag: []
+  };
+  tempTags: string = '';
+  constructor(private StrangerThingsService: StrangerThingsService ) { }
+
 
   ngOnInit(): void {
+  }
+
+  addContentToServer(): void {
+    this.contentItem.hashtag = this.tempTags.split(", ");
+    this.StrangerThingsService.addContentItem(this.contentItem)
+      .subscribe(newContentFromServer =>
+        console.log("Success! New content added", newContentFromServer)
+      );
+  }
+  updateContentOnServer(): void {
+    this.contentItem.hashtag = this.tempTags.split(", ");
+    this.StrangerThingsService.update(this.contentItem)
+      .subscribe(() =>
+        console.log("Content updated successfully", this.contentItem)
+      );
   }
 
 }

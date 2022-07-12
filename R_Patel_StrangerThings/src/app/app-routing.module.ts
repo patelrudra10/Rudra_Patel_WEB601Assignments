@@ -26,13 +26,14 @@ const routes: Routes = [
     component: SearchComponent,
   },
   {
+    path: "addContent",
+    component: ChangeContentComponent,
+  },
+  {
     path: "**",
     component: InvalidComponent
   },
-  {
-    path: "addContent",
-    component: ChangeContentComponent,
-  }
+  
 ];
 
 @NgModule({
